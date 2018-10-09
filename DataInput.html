@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>DASH</h1>
+
+<h2>SIMPLIFY YOUR DEGREE</h2>
+
+<p1>A clean way for students to see your degree progression.</p1>
+<br><br>
+<br><br><br><br>
+<form action="DataTest.html" method="get">
+	<fieldset>
+		<legend>Input Your Degree Progress:</legend>
+	Major Credits:<br>
+	<input type="number" name="maj1Creds" min="0" max="1000"><br><br>
+	Minor Credits:<br>
+	<input type="number" name="min1Creds" min="0" max="1000"><br><br>
+	Core Credits:<br>
+	<input type="number" name="coreCreds" min="0" max="1000"><br><br>
+	<input type="submit" value="Submit">
+</form>
+<script>
+
+if (navigator.appVersion.indexOf("Mac")!=-1){
+document.getElementById("command").innerHTML = "CMD";
+}
+else if (navigator.appVersion.indexOf("Win")!=-1){
+document.getElementById("command").innerHTML = "CTRL";
+}
+else {
+document.getElementById("command").innerHTML = "Test";
+}
+
+</script>
+
+</body>
+</html>

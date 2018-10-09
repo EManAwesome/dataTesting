@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+			//getting the variables
+			var maj1Creds = document.getElementById("maj1Creds").innerHTML;
+			var maj2Creds = document.getElementById("maj2Creds").innerHTML;
+			var min1Creds = document.getElementById("min1Creds").innerHTML;
+			var min2Creds = document.getElementById("min2Creds").innerHTML;
+			var coreCreds = document.getElementById("coreCreds").innerHTML;
+			/*
+			maj1Creds = 70;
+			maj2Creds = 0;
+			min1Creds = 20;
+			min2Creds = 15;
+			coreCreds = 18;
+			*/
+			var incCreds = 120 - maj1Creds - maj2Creds - min1Creds - min2Creds - coreCreds;
+				if (incCreds < 0) {
+					incCreds = 0;
+				}
+			//creating and drawing the chart
+			google.charts.load("current", {packages:["corechart"]});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['Section', 'Completed Credits'],
+					['Major', maj1Creds],
+					['Major 2', maj2Creds],
+//					['Major 3',     0],
+					['Minor', min1Creds],
+					['Minor 2', min2Creds],
+//					['Minor 3',     1],
+					['Core', coreCreds],
+					['Incomplete', incCreds]
+				]);
+			//chart options
+					var options = {
+						title: 'Mockup',
+						pieHole: 0.55,
+						pieSliceBorderColor: 'black',
+//						backgroundColor:'red',
+						chartArea:
+							{width:'70%', height:'80%'},
+						slices: {
+							0: { color: 'green'},
+							1: { color: '#00FF00'}
+						},
+					};
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
