@@ -1,12 +1,18 @@
 body {
-	background-color: #00BFFF;
+	background-color: #967BB6;
 	background-size: cover;
 	text-align: center;
+  color: #FFFFFF;
 }
 
 h1 {
-color: #111;
-font-family: 'Helvetica Neue', sans-serif; font-size: 80px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; 
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 80px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center; 
 }
 
 
@@ -33,6 +39,7 @@ h1 {
   font-style: italics;
   padding-top: 0.1em;
   text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
   
   &::before, &::after {
   content: "§";
