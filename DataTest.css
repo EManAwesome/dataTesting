@@ -8,8 +8,16 @@ h1 {
   text-align: center;
   font-size: 50px;
   margin-top: 20px;
+  font-family: New Century Schoolbook, serif;
 }
 
 p1 {
   font-size: 30px;
+  font-family: New Century Schoolbook, serif;
+}
+
+.donutchart {
+  float: right;
+  width: 700px; 
+  height: 600px;
 }
